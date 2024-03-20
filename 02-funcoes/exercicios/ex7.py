@@ -27,5 +27,9 @@ peso_ideal = get_peso_ideal(peso, altura)
 
 print(f"IMC: {imc}")
 print(f"Classificação: {get_classificacao(imc)}")
-print(f"Você precisa {"perder" if peso_ideal >= 0.0 else "ganhar"} {peso_ideal if peso_ideal >= 0.0 else peso_ideal * -1}kg para chegar ao peso normal.")
+
+if peso_ideal >= 0.0:
+    print(f"Você precisa perder {peso_ideal}Kg para atingir seu peso normal")
+else:
+    print(f"Você precisa ganhar {peso_ideal * -1}Kg para atingir seu peso normal")
 
